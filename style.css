@@ -1,0 +1,80 @@
+/* =================
+  WRITE YOUR CSS HERE.
+  Check the ⌄ for help with formatting and validating your code.
+  You must write some CSS to complete this challenge.
+   ===================
+*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: cyan;
+  font-family: sans-serif;
+  text-align: center;
+  
+}
+.c-site-header {
+  font-size: 30px;
+  text-align: left;
+  padding: 20px 20px 20px 40px;
+}
+.c-site-head-1{
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  color: blue;
+}
+.c-site-head {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: blue;
+}
+
+#about-me {
+  font-size: 25px;
+
+}
+
+#home-town {
+  width: 500px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50%;
+  margin: 10px 0px 20px 0px;
+}
+
+#page-h1 {
+ color: red;
+  font-family: sans-serif;
+  padding-bottom: -25px;
+  padding-top: 50px;
+  font-size: 50px:
+}
+.iframe{
+  width: 1200px;
+}
+.c-site-footer{
+   font-size: 30px;
+  text-align: right;
+  padding: 20px 20px 20px 40px;
+}
+
+li {
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+/* don't edit this */
+.jest-lite-report__status--pass {
+  background: var(--color-pass);
+}
+.jest-lite-report__errors { display:none }
+   .page-h1 {
+  color: blue;
+  font-size: 40px;
+ 
+}
