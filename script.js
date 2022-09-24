@@ -118,6 +118,60 @@ function display_the_roll() {
 }
 
 
+prettify.toHTML(run(), console);
+var roll, dice, total_dice, item;
+
+function randomInt(n) {
+  // Return a random number from in [0, n[
+  return Math.floor(Math.random()*n);
+}
+
+function randomMember(arr) {
+  // Return a random member of the array
+  return arr[randomInt(arr.length)]
+}
+
+// Describe this function...
+function rolls() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_list2 = document.getElementById('list');
+  roll.forEach((item) => {
+    let new_li2 = document.createElement('li');
+    new_li2.innerText = item;
+
+    element_list2.appendChild(new_li2);
+  });
+  let element_total2 = document.getElementById('total');
+  element_total2.innerText = roll.reduce((a,b) => a+b, 0);
+  let element_button_roll = document.getElementById('button_roll');
+  element_button_roll.style.color = '#ff9900';
+  element_button_roll.style.backgroundColor = '#66ffff';
+  let element_button_remove = document.getElementById('button_remove');
+  element_button_remove.style.color = '#660000';
+  element_button_remove.style.backgroundColor = '#ffccff';
+  let element_button_restart = document.getElementById('button_restart');
+  element_button_restart.style.color = '#666666';
+  element_button_restart.style.backgroundColor = '#66ff99';
+}
+
+// Describe this function...
+function display_the_roll() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_info = document.getElementById('info');
+  total_dice = [roll.reduce((a,b) => a+b, 0)];
+  if (total_dice == 11) {
+    element_info.innerText = 'you won';
+    element_info.style.color = '#00cccc';
+  } else if (total_dice < 11) {
+    element_info.innerText = 'keep playing';
+    element_info.style.color = '#33ff33';
+  } else if (total_dice > 11) {
+    element_info.innerText = 'you lost';
+    element_info.style.color = '#cc0000';
+  }
+}
+
+
 roll = [];
 dice = [1, 2, 3, 4, 5, 6];
 let element_p1 = document.getElementById('p1');
@@ -159,4 +213,3 @@ document.getElementById('button_remove').addEventListener('click', (event) => {
   display_the_roll();
 
 });
-prettify.toHTML(run(), console);
